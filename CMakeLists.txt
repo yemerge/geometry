@@ -93,14 +93,14 @@ add_subdirectory(${${PROJECT_NAME}_MODULE_PATH})
 add_subdirectory(${${PROJECT_NAME}_APPLICATION_PATH})
 
 set(${PROJECT_NAME}_SOURCE_FILES
-  src/point2d.cpp
+src/point2d.cpp
 
-  # ! Add source files here
+# ! Add source files here
 )
 
 # ! If you want to make a library, use the following code
 add_library(${PROJECT_NAME} STATIC
-  ${${PROJECT_NAME}_SOURCE_FILES}
+${${PROJECT_NAME}_SOURCE_FILES}
 )
 
 # ! If you want to make an executable, use the following code
@@ -110,9 +110,9 @@ add_library(${PROJECT_NAME} STATIC
 
 # ! If you want to add include directories and link libraries, use the following code
 target_include_directories(${PROJECT_NAME} PUBLIC
-  ${${PROJECT_NAME}_INCLUDE_PATH}
+${${PROJECT_NAME}_INCLUDE_PATH}
 
-  ! Add include path here
+# ! Add include path here
 )
 
 # target_link_libraries(${PROJECT_NAME} PRIVATE
@@ -120,13 +120,16 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 # ! Add libraries here
 # )
 # add_dependencies(${PROJECT_NAME}
-include(cmake/create_documents.cmake)
 
 # ! Add dependencies here
 # )
 target_compile_options(${PROJECT_NAME} PRIVATE
 ${CPP_COMFILE_FLAGS}
 )
+
+add_subdirectory(${${PROJECT_NAME}_TEST_PATH})
+include(cmake/create_documents.cmake)
+
 message(STATUS)
 message(STATUS "Finished all process in ${PROJECT_NAME} CMakeLists.txt.")
 message(STATUS)
