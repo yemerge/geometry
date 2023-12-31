@@ -10,5 +10,8 @@ build/**
 # Windows
 .DS_Store
 
+# Documentation
+documents/**
+
 # Thirdparty
 thirdparty/install/**
