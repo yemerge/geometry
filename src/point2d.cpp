@@ -37,4 +37,43 @@ namespace yemerge::geometry {
   
   auto Point2D::SetY(double input_y) -> void { y_ = input y_; }
 
+  auto Point2D::operator+(const Point2D &other) const -> Point2D {
+    return Point2D(x_ + other.x_, y_ + other.y_);
+  }
+
+  auto Point2D::operator-(const Point2D &other) const -> Point2D {
+    return Point2D(x_ - other.x_, y_ - other.y_);
+  }
+
+  auto Point2D::operator+=(const Point2D &other) -> Point2D& {
+    x_ += other.x_;
+    y_ += other.y_;
+    return *this;
+  }
+
+  auto Point2D::operator-=(const Point2D &other) -> Point2D& {
+    x_ -= other.x_;
+    y_ -= other.y_;
+    return *this;
+  }
+
+  auto Point2D::operator*(double scalar) const -> Point2D {
+    return Point2D(x_ * scalar, y_ * scalar);
+  }
+
+  auto Point2D::operator/(double scalar) const -> Point2D {
+    if (scalar == 0) {
+        throw std::runtime_error("Division by zero");
+    }
+    return Point2D(x_ / scalar, y_ / scalar);
+  }
+
+  auto Point2D::operator==(const Point2D &other) const -> bool {
+    return x_ == other.x_ && y_ == other.y_;
+  }
+
+  auto Point2D::operator!=(const Point2D &other) const -> bool {
+    return !(*this == other);
+  }
+
 }

@@ -172,4 +172,4 @@ class Point2D {
 
 }  // namespace yemerge::geometry
 
-#endif
+#endif  // YEMERGE__GEOMETRY__POINT_2D_HPP_

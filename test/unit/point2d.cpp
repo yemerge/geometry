@@ -143,4 +143,129 @@ namespace yemerge::geometry {
       EXPECT_FLOAT_EQ(KSourceY, source.GetY());
     }
   }
+
+  TEST(GeometryPoint2D, OperatorPlus) {
+    for(uint32_t i = 0; i < kTestCount; ++i) {
+      constexpr auto KSourceX = static_cast<double>(std::rand());
+      constexpr auto KSourceY = static_cast<double>(std::rand());
+      constexpr auto KTargetX = static_cast<double>(std::rand());
+      constexpr auto KTargetY = static_cast<double>(std::rand());
+
+      Point2D source(KSourceX, KSourceY);
+      Point2D target(KTargetX, KTargetY);
+      Point2D result = source + target;
+
+      EXPECT_FLOAT_EQ(result.GetX(), KSourceX + KTargetX);
+      EXPECT_FLOAT_EQ(result.GetY(), KSourceY + KTargetY);
+    }
+  }
+
+  TEST(GeometryPoint2D, OperatorMinus) {
+    for(uint32_t i = 0; i < kTestCount; ++i) {
+      constexpr auto KSourceX = static_cast<double>(std::rand());
+      constexpr auto KSourceY = static_cast<double>(std::rand());
+      constexpr auto KTargetX = static_cast<double>(std::rand());
+      constexpr auto KTargetY = static_cast<double>(std::rand());
+
+      Point2D source(KSourceX, KSourceY);
+      Point2D target(KTargetX, KTargetY);
+      Point2D result = source - target;
+
+      EXPECT_FLOAT_EQ(result.GetX(), KSourceX - KTargetX);
+      EXPECT_FLOAT_EQ(result.GetY(), KSourceY - KTargetY);
+    }
+  }
+
+  TEST(GeometryPoint2D, OperatorPlusEqual) {
+    for(uint32_t i = 0; i < kTestCount; ++i) {
+      auto KSourceX = static_cast<double>(std::rand());
+      auto KSourceY = static_cast<double>(std::rand());
+      auto KTargetX = static_cast<double>(std::rand());
+      auto KTargetY = static_cast<double>(std::rand());
+
+      Point2D source(KSourceX, KSourceY);
+      Point2D target(KTargetX, KTargetY);
+      source += target;
+
+      EXPECT_FLOAT_EQ(source.GetX(), KSourceX + KTargetX);
+      EXPECT_FLOAT_EQ(source.GetY(), KSourceY + KTargetY);
+    }
+  }
+
+  TEST(GeometryPoint2D, OperatorMinusEqual) {
+    for(uint32_t i = 0; i < kTestCount; ++i) {
+      auto KSourceX = static_cast<double>(std::rand());
+      auto KSourceY = static_cast<double>(std::rand());
+      auto KTargetX = static_cast<double>(std::rand());
+      auto KTargetY = static_cast<double>(std::rand());
+
+      Point2D source(KSourceX, KSourceY);
+      Point2D target(KTargetX, KTargetY);
+      source -= target;
+
+      EXPECT_FLOAT_EQ(source.GetX(), KSourceX - KTargetX);
+      EXPECT_FLOAT_EQ(source.GetY(), KSourceY - KTargetY);
+    }
+  }
+
+  TEST(GeometryPoint2D, OperatorMultiply) {
+    for(uint32_t i = 0; i < kTestCount; ++i) {
+      auto KSourceX = static_cast<double>(std::rand());
+      auto KSourceY = static_cast<double>(std::rand());
+      double scalar = static_cast<double>(std::rand());
+
+      Point2D source(KSourceX, KSourceY);
+      Point2D result = source * scalar;
+
+      EXPECT_FLOAT_EQ(result.GetX(), KSourceX * scalar);
+      EXPECT_FLOAT_EQ(result.GetY(), KSourceY * scalar);
+    }
+  }
+
+  TEST(GeometryPoint2D, OperatorDivide) {
+    for(uint32_t i = 0; i < kTestCount; ++i) {
+      auto KSourceX = static_cast<double>(std::rand());
+      auto KSourceY = static_cast<double>(std::rand());
+      double scalar = static_cast<double>(std::rand()) + 1; // Adding 1 to avoid division by zero
+
+      Point2D source(KSourceX, KSourceY);
+      Point2D result = source / scalar;
+
+      EXPECT_FLOAT_EQ(result.GetX(), KSourceX / scalar);
+      EXPECT_FLOAT_EQ(result.GetY(), KSourceY / scalar);
+    }
+  }
+
+  TEST(GeometryPoint2D, OperatorDivideByZero) {
+    Point2D source(1.0, 1.0);
+    EXPECT_THROW(source / 0, std::runtime_error);
+  }
+
+  TEST(GeometryPoint2D, OperatorEqual) {
+    for(uint32_t i = 0; i < kTestCount; ++i) {
+      auto KSourceX = static_cast<double>(std::rand());
+      auto KSourceY = static_cast<double>(std::rand());
+
+      Point2D source(KSourceX, KSourceY);
+      Point2D target(KSourceX, KSourceY);
+
+      EXPECT_TRUE(source == target);
+    }
+  }
+
+  TEST(GeometryPoint2D, OperatorNotEqual) {
+    for(uint32_t i = 0; i < kTestCount; ++i) {
+      auto KSourceX = static_cast<double>(std::rand());
+      auto KSourceY = static_cast<double>(std::rand());
+      auto KTargetX = static_cast<double>(std::rand());
+      auto KTargetY = static_cast<double>(std::rand());
+
+      Point2D source(KSourceX, KSourceY);
+      Point2D target(KTargetX, KTargetY);
+
+      if (KSourceX != KTargetX || KSourceY != KTargetY) {
+        EXPECT_TRUE(source != target);
+    }
+  }
+
 }
