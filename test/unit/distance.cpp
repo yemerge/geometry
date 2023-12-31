@@ -116,6 +116,60 @@ namespace yemerge::geometry {
     // EXPECT_TRUE(distance5 == distance6);
   }
 
+  TEST(GeometryDistance, OperatorNotEqual) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
+    Distance distance(KInputValue * 1.0e+3, Distance::Type::kMeter);
+    Distance distance_by_nano(KInputValue * 1.0e+12, Distance::Type::kNanometer);
+
+    Distance different_distance(2039.0, Distance::Type::kKilometer);
+
+    EXPECT_FALSE(distance_by_kilo != distance);
+    EXPECT_FALSE(distance_by_kilo != distance_by_nano);
+    EXPECT_FALSE(distance != distance_by_nano);
+    EXPECT_TRUE(distance_by_kilo != different_distance);
+  }
+
+  TEST(GeometryDistance, OperatorLessThan) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
+    Distance smaller_distance(KInputValue - 1.0, Distance::Type::kKilometer);
+
+    EXPECT_TRUE(smaller_distance < distance_by_kilo);
+    EXPECT_FALSE(distance_by_kilo < smaller_distance);
+  }
+
+  TEST(GeometryDistance, OperatorLessThanOrEqual) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
+    Distance same_distance(KInputValue * 1.0e+3, Distance::Type::kMeter);
+    Distance smaller_distance(KInputValue - 1.0, Distance::Type::kKilometer);
+
+    EXPECT_TRUE(smaller_distance <= distance_by_kilo);
+    EXPECT_TRUE(distance_by_kilo <= same_distance);
+    EXPECT_FALSE(distance_by_kilo <= smaller_distance);
+  }
+
+  TEST(GeometryDistance, OperatorGreaterThan) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
+    Distance larger_distance(KInputValue + 1.0, Distance::Type::kKilometer);
+
+    EXPECT_TRUE(larger_distance > distance_by_kilo);
+    EXPECT_FALSE(distance_by_kilo > larger_distance);
+  }
+
+  TEST(GeometryDistance, OperatorGreaterThanOrEqual) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
+    Distance same_distance(KInputValue * 1.0e+3, Distance::Type::kMeter);
+    Distance larger_distance(KInputValue + 1.0, Distance::Type::kKilometer);
+
+    EXPECT_TRUE(larger_distance >= distance_by_kilo);
+    EXPECT_TRUE(distance_by_kilo >= same_distance);
+    EXPECT_FALSE(smaller_distance >= distance_by_kilo);
+  }
+
   TEST(GeometryDistance, OperatorAdd) {
     const auto KInputValue = static_cast<double>(2038.0);
     Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
@@ -129,7 +183,68 @@ namespace yemerge::geometry {
     EXPECT_DOUBLE_EQ(Distance1.GetValue(Distance::Type::kKilometer), KInputValue * 2.0);
     EXPECT_DOUBLE_EQ(Distance2.GetValue(Distance::Type::kKilometer), KInputValue * 2.0);
     EXPECT_DOUBLE_EQ(Distance3.GetValue(Distance::Type::kKilometer), KInputValue * 2.0);
-    
+  }
+
+  TEST(GeometryDistance, OperatorSubtract) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
+    Distance distance(KInputValue * 1.0e+3, Distance::Type::kMeter);
+    Distance subtracted_distance = distance_by_kilo - distance;
+
+    EXPECT_DOUBLE_EQ(subtracted_distance.GetValue(Distance::Type::kKilometer), 0.0);
+  }
+
+  TEST(GeometryDistance, OperatorMultiply) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance(KInputValue, Distance::Type::kKilometer);
+    auto multiplied_distance = distance * 2.0;
+
+    EXPECT_DOUBLE_EQ(multiplied_distance.GetValue(Distance::Type::kKilometer), KInputValue * 2.0);
+  }
+
+  TEST(GeometryDistance, OperatorDivide) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance(KInputValue, Distance::Type::kKilometer);
+    auto divided_distance = distance / 2.0;
+
+    EXPECT_DOUBLE_EQ(divided_distance.GetValue(Distance::Type::kKilometer), KInputValue / 2.0);
+  }
+
+  TEST(GeometryDistance, OperatorDivideByZero) {
+    Distance distance(1, Distance::Type::kKilometer);
+    EXPECT_THROW(distance / 0.0, std::runtime_error);
+  }
+
+  TEST(GeometryDistance, OperatorPlusEqual) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
+    distance_by_kilo += Distance(KInputValue, Distance::Type::kKilometer);
+
+    EXPECT_DOUBLE_EQ(distance_by_kilo.GetValue(Distance::Type::kKilometer), KInputValue * 2.0);
+  }
+
+  TEST(GeometryDistance, OperatorMinusEqual) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance_by_kilo(KInputValue, Distance::Type::kKilometer);
+    distance_by_kilo -= Distance(KInputValue / 2.0, Distance::Type::kKilometer);
+
+    EXPECT_DOUBLE_EQ(distance_by_kilo.GetValue(Distance::Type::kKilometer), KInputValue / 2.0);
+  }
+
+  TEST(GeometryDistance, OperatorMultiplyEqual) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance(KInputValue, Distance::Type::kKilometer);
+    distance *= 2.0;
+
+    EXPECT_DOUBLE_EQ(distance.GetValue(Distance::Type::kKilometer), KInputValue * 2.0);
+  }
+
+  TEST(GeometryDistance, OperatorDivideEqual) {
+    const auto KInputValue = static_cast<double>(2038.0);
+    Distance distance(KInputValue, Distance::Type::kKilometer);
+    distance /= 2.0;
+
+    EXPECT_DOUBLE_EQ(distance.GetValue(Distance::Type::kKilometer), KInputValue / 2.0);
   }
 }
 
