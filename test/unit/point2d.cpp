@@ -1,94 +1,146 @@
 // Copyright (c) 2023 Programmers, All Rights Reserved.
 // Authors : yemerge
-#include <limits>
+#include <cmath>
 #include <stdexcept>
 
-#include "math/utils.hpp"
+#include "geometry/point2d.hpp"
 
 #include "gtest/gtest.h"
 
+// Variables that can only be used within the source file. 
+// If you do not set a namespace, it becomes a global variable.
+namespace {
+  constexpr uint32_t kTestCount = 1000U;
+}
+
 namespace yemerge::geometry {
-  TEST(MathUtils, Add) {
-  // double type, return lhs + rhs
-  // inf, nan, lhs + rhs != inf or lhs + rhs != nan
-  // lhs, rhs -> nan, inf => exception std::invalid_argument
+  TEST(GeometryPoint2D, Constructor) {
+    Point2D point1;
+    Point2D point2(0.0, 1.0);
+    Point2D point3(point2);   // Copied
+    Point2D point4(std::move(Point2D()));
+    // point1 disappears and is replaced by point4
+    // EXPECT_EQ(point.x(), 0);
+    // EXPECT_EQ(point.y(), 0);
 
-  EXPECT_THROW(Add(0.0, std::nan("")), std::invalid_argument);
-  EXPECT_THROW(Add(std::nan(""), 0.0), std::invalid_argument);
-  EXPECT_THROW(Add(std::nan(""), std::nan("")), std::invalid_argument);
-  EXPECT_THROW(Add(0.0, std::numeric_limits<double>::infinity()), std::invalid_argument);
-  EXPECT_THROW(Add(std::numeric_limits<double>::infinity(), 0.0), std::invalid_argument);
-  EXPECT_THROW(Add(std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()), std::invalid_argument);
-  EXPECT_THROW(Add(1.0/0.0, 1.0), std::invalid_argument);
-
-  EXPECT_EQ(Add(0.0, 0.0), 0.0);
-  EXPECT_EQ(Add(1.0, 0.0), 1.0);
-  EXPECT_EQ(Add(0.0, 1.0), 1.0);
-  EXPECT_EQ(Add(0.5, 0.5), 1.0);
-
-  EXPECT_NE(Add(0.0, 0.0), 1.0);
-  EXPECT_NE(Add(0.0, 1.0), 1.1);
-  EXPECT_NE(Add(0.5, 0.3), 1.0);
-  EXPECT_NE(Add(0.0, 2.0), 1.0);
+    // Point2D point2(1,2);
+    // EXPECT_EQ(point2.x(), 1);
+    // EXPECT_EQ(point2.y(), 2);
+    
+    // Point2D point3(point2);
+    // EXPECT_EQ(point3.x(), 1);
+    // EXPECT_EQ(point3.y(), 2);
+    
+    // Point2D point4(std::move(point2));
+    // EXPECT_EQ(point4.x(), 1);
+    // EXPECT_EQ(point4.y(), 2);
+  }
+  TEST(GeometryPoint2D, AssignmentOperator) {
+    Point2D point1;
+    auto point2 = point1;
+    auto point3 = std::move(Point2D());
   }
 
-  TEST(MathUtils, Subtract) {
-  EXPECT_THROW(Subtract(0.0, std::nan("")), std::invalid_argument);
-  EXPECT_THROW(Subtract(std::nan(""), 0.0), std::invalid_argument);
-  EXPECT_THROW(Subtract(std::nan(""), std::nan("")), std::invalid_argument);
-  EXPECT_THROW(Subtract(0.0, std::numeric_limits<double>::infinity()), std::invalid_argument);
-  EXPECT_THROW(Subtract(std::numeric_limits<double>::infinity(), 0.0), std::invalid_argument);
-  EXPECT_THROW(Subtract(std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()), std::invalid_argument);
-  EXPECT_THROW(Subtract(1.0/0.0, 1.0), std::invalid_argument);
+  TEST(GeometryPoint2D, CalculateDistance) {
+    // Implementing random operations using for loops
+    // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
+    for(uint32_t i = 0; i < kTestCount; ++i)
+    {
+      constexpr auto KSourceX = static_cast<double>(std::rand());
+      constexpr auto KSourceY = static_cast<double>(std::rand());
+      constexpr auto KTargetX = static_cast<double>(std::rand());
+      constexpr auto KTargetY = static_cast<double>(std::rand());
 
-  EXPECT_EQ(Subtract(1.0, 0.0), 1.0);
-  EXPECT_EQ(Subtract(1.0, 1.0), 0.0);
-  EXPECT_EQ(Subtract(0.5, 0.3), 0.2);
+      Point2D source(KSourceX, KSourceY);
+      Point2D target(KTargetX, KTargetY);
 
-  EXPECT_NE(Subtract(1.0, 0.0), 0.0);
-  EXPECT_NE(Subtract(1.0, 0.5), 1.0);
-  EXPECT_NE(Subtract(0.0, 1.0), 1.0);
-}
 
-TEST(MathUtils, Multiply) {
-  EXPECT_THROW(Multiply(0.0, std::nan("")), std::invalid_argument);
-  EXPECT_THROW(Multiply(std::nan(""), 0.0), std::invalid_argument);
-  EXPECT_THROW(Multiply(std::nan(""), std::nan("")), std::invalid_argument);
-  EXPECT_THROW(Multiply(0.0, std::numeric_limits<double>::infinity()), std::invalid_argument);
-  EXPECT_THROW(Multiply(std::numeric_limits<double>::infinity(), 0.0), std::invalid_argument);
-  EXPECT_THROW(Multiply(std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()), std::invalid_argument);
-  EXPECT_THROW(Multiply(1.0/0.0, 1.0), std::invalid_argument);
+      EXPECT_FLOAT_EQ(std::sqrt((KSourceX - KTargetX) * (KSourceX - KTargetX) + 
+                                (KSourceY - KTargetY) * (KSourceY - KTargetY)),
+                      source.CalculateDistance(target));
+    }
+    // constexpr double kSourceX = 1.0;
+    // constexpr double kSourceY = 2.0;
+    // constexpr double kTargetX = 4.0;
+    // constexpr double kTargetY = 6.0;
 
-  EXPECT_EQ(Multiply(1.0, 0.0), 0.0);
-  EXPECT_EQ(Multiply(1.0, 1.0), 1.0);
-  EXPECT_EQ(Multiply(2.0, 3.0), 6.0);
+    // Point2D source(kSourceX, kSourceY);
+    // Point2D target(kTargetX, kTargetY);
 
-  EXPECT_NE(Multiply(1.0, 1.0), 0.0);
-  EXPECT_NE(Multiply(2.0, 2.0), 5.0);
-  EXPECT_NE(Multiply(0.0, 1.0), 1.0);
-}
 
-TEST(MathUtils, Divide) {
-  EXPECT_THROW(Divide(0.0, std::nan("")), std::invalid_argument);
-  EXPECT_THROW(Divide(std::nan(""), 0.0), std::invalid_argument);
-  EXPECT_THROW(Divide(std::nan(""), std::nan("")), std::invalid_argument);
-  EXPECT_THROW(Divide(0.0, std::numeric_limits<double>::infinity()), std::invalid_argument);
-  EXPECT_THROW(Divide(std::numeric_limits<double>::infinity(), 0.0), std::invalid_argument);
-  EXPECT_THROW(Divide(std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity()), std::invalid_argument);
-  EXPECT_THROW(Divide(1.0, 0.0), std::invalid_argument);
-  EXPECT_THROW(Divide(1.0/0.0, 1.0), std::invalid_argument);
+    // EXPECT_FLOAT_EQ(std::sqrt((kSourceX - kTargetX) * (kSourceX - kTargetX) + 
+    //                           (kSourceY - kTargetY) * (kSourceY - kTargetY)),
+    //                 source.CalculateDistance(target));
+  }
 
-  EXPECT_EQ(Divide(1.0, 1.0), 1.0);
-  EXPECT_EQ(Divide(4.0, 2.0), 2.0);
-  EXPECT_EQ(Divide(6.0, 3.0), 2.0);
+  TEST(GeometryPoint2D, StaticCalculateDistance) {
+    // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
+    for(uint32_t i = 0; i < kTestCount; ++i)
+    {
+      constexpr auto KSourceX = static_cast<double>(std::rand());
+      constexpr auto KSourceY = static_cast<double>(std::rand());
+      constexpr auto KTargetX = static_cast<double>(std::rand());
+      constexpr auto KTargetY = static_cast<double>(std::rand());
 
-  EXPECT_NE(Divide(1.0, 1.0), 0.0);
-  EXPECT_NE(Divide(4.0, 4.0), 0.5);
-  EXPECT_NE(Divide(0.0, 1.0), 1.0);
-}
+      Point2D source(KSourceX, KSourceY);
+      Point2D target(KTargetX, KTargetY);
 
-  // TEST(MathUtils, IsEqual) {
-  //   // EXPECT_TRUE(IsEqual(double lhs, double rhs));
-  //   EXPECT_TRUE(IsEqual(0.00005+0.00005, 0.0001));  // When it is a floating type, it may not come out as true.
-  // }
+
+      EXPECT_FLOAT_EQ(std::sqrt((KSourceX - KTargetX) * (KSourceX - KTargetX) + 
+                                (KSourceY - KTargetY) * (KSourceY - KTargetY)),
+                      Point2D::CalculateDistance(source, target));
+    }
+  }
+
+  TEST(GeometryPoint2D, GetX) {
+    // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
+    for(uint32_t i = 0; i < kTestCount; ++i)
+    {
+      constexpr auto KSourceX = static_cast<double>(std::rand());
+      
+      Point2D source(KSourceX, 0.0);
+
+      EXPECT_FLOAT_EQ(KSourceX, source.GetX());
+    }
+  }
+  
+  TEST(GeometryPoint2D, GetY) {
+    // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
+    for(uint32_t i = 0; i < kTestCount; ++i)
+    {
+      constexpr auto KSourceY = static_cast<double>(std::rand());
+
+      Point2D source(0.0, KSourceY);
+
+      EXPECT_FLOAT_EQ(KSourceY, source.GetY());
+    }
+  }
+
+  TEST(GeometryPoint2D, SetX) {
+    // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
+    for(uint32_t i = 0; i < kTestCount; ++i)
+    {
+      constexpr auto KSourceX = static_cast<double>(std::rand());
+      
+      Point2D source; // Initialized with default constructor
+
+      source.SetX(KSourceX);
+
+      EXPECT_FLOAT_EQ(KSourceX, source.GetX());
+    }
+  }
+
+  TEST(GeometryPoint2D, SetY) {
+    // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
+    for(uint32_t i = 0; i < kTestCount; ++i)
+    {
+      constexpr auto KSourceY = static_cast<double>(std::rand());
+      
+      Point2D source; // Initialized with default constructor
+
+      source.SetY(KSourceY);
+
+      EXPECT_FLOAT_EQ(KSourceY, source.GetY());
+    }
+  }
 }
