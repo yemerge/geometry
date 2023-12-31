@@ -95,10 +95,44 @@ namespace yemerge::geometry {
      */
     auto operator == (const Distance& other) const -> bool;
 
+    /**
+    * @brief Compare with other distance object for inequality.
+    * @param other The other distance object.
+    * @return true If not equal.
+    * @return false If equal.
+    */
     auto operator != (const Distance& other) const -> bool;
+
+    /**
+    * @brief Check if this distance object is less than the other.
+    * @param other The other distance object to compare with.
+    * @return true If this distance object is less than the other.
+    * @return false Otherwise.
+    */
     auto operator < (const Distance& other) const -> bool;
+
+    /**
+    * @brief Check if this distance object is less than or equal to the other.
+    * @param other The other distance object to compare with.
+    * @return true If this distance object is less than or equal to the other.
+    * @return false Otherwise.
+    */
     auto operator <= (const Distance& other) const -> bool;
+
+    /**
+    * @brief Check if this distance object is greater than the other.
+    * @param other The other distance object to compare with.
+    * @return true If this distance object is greater than the other.
+    * @return false Otherwise.
+    */
     auto operator > (const Distance& other) const -> bool;
+
+    /**
+    * @brief Check if this distance object is greater than or equal to the other.
+    * @param other The other distance object to compare with.
+    * @return true If this distance object is greater than or equal to the other.
+    * @return false Otherwise.
+    */
     auto operator >= (const Distance& other) const -> bool;
     
     /**
@@ -107,13 +141,56 @@ namespace yemerge::geometry {
      * @return Distance The result of addition
      */
     auto operator+(const Distance& other) const -> Distance;
+
+    /**
+    * @brief Subtract another distance object from this one.
+    * @param other The other distance object.
+    * @return Distance The result of subtraction.
+    */
     auto operator-(const Distance& other) const -> Distance;
+
+    /**
+    * @brief Multiply this distance by a scalar value.
+    * @param scale The scalar value to multiply by.
+    * @return Distance The result of multiplication.
+    */
     auto operator*(double scale) const -> Distance;
+
+    /**
+    * @brief Divide this distance by a scalar value.
+    * @param scale The scalar value to divide by.
+    * @return Distance The result of division.
+    * @throw std::runtime_error If scale is zero.
+    */
     auto operator/(double scale) const -> Distance;
 
+    /**
+    * @brief Add another distance object to this one and update this object.
+    * @param other The other distance object.
+    * @return void
+    */
     auto operator+=(const Distance& other) const -> void;
+
+    /**
+    * @brief Subtract another distance object from this one and update this object.
+    * @param other The other distance object.
+    * @return void
+    */
     auto operator-=(const Distance& other) const -> void;
+
+    /**
+    * @brief Multiply this distance by a scalar value and update this object.
+    * @param scale The scalar value to multiply by.
+    * @return void
+    */
     auto operator*=(double scale) const -> void;
+
+    /**
+    * @brief Divide this distance by a scalar value and update this object.
+    * @param scale The scalar value to divide by.
+    * @return void
+    * @throw std::runtime_error If scale is zero.
+    */
     auto operator/=(double scale) const -> void;
 
     protected:
