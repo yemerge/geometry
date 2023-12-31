@@ -78,8 +78,61 @@ namespace yemerge::geometry {
     return (nanometer_ == other.nanometer_);
   }
 
+  auto Distance::operator!=(const Distance& other) const -> bool {
+    return nanometer_ != other.nanometer_;
+  }
+
+  auto Distance::operator<(const Distance& other) const -> bool {
+    return nanometer_ < other.nanometer_;
+  }
+
+  auto Distance::operator<=(const Distance& other) const -> bool {
+    return nanometer_ <= other.nanometer_;
+  }
+
+  auto Distance::operator>(const Distance& other) const -> bool {
+    return nanometer_ > other.nanometer_;
+  }
+
+  auto Distance::operator>=(const Distance& other) const -> bool {
+    return nanometer_ >= other.nanometer_;
+  }
+
   auto Distance::operator+(const Distance &other) const -> Distance {
     return Distance(static_cast<double>(nanometer_ + other.nanometer_), Type::kNanometer);
   }
 
+  auto Distance::operator-(const Distance& other) const -> Distance {
+    return Distance(static_cast<double>(nanometer_ - other.nanometer_), Type::kNanometer);
+  }
+
+  auto Distance::operator*(double scale) const -> Distance {
+    return Distance(static_cast<double>(nanometer_ * scale), Type::kNanometer);
+  }
+
+  auto Distance::operator/(double scale) const -> Distance {
+    if (scale == 0) {
+      throw std::runtime_error("Division by zero");
+    }
+    return Distance(static_cast<double>(nanometer_ / scale), Type::kNanometer);
+  }
+
+  auto Distance::operator+=(const Distance& other) const -> void {
+    nanometer_ += other.nanometer_;
+  }
+
+  auto Distance::operator-=(const Distance& other) const -> void {
+    nanometer_ -= other.nanometer_;
+  }
+
+  auto Distance::operator*=(double scale) const -> void {
+    nanometer_ = static_cast<int64_t>(nanometer_ * scale);
+  }
+
+  auto Distance::operator/=(double scale) const -> void {
+    if (scale == 0) {
+      throw std::runtime_error("Division by zero");
+    }
+    nanometer_ = static_cast<int64_t>(nanometer_ / scale);
+  }
 }
