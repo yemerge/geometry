@@ -22,8 +22,11 @@ function(build_thirdparty COMFIGURATION_PACKAGE_PATH)
       WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME})
     message(STATUS "Finish install for ${PROJECT_NAME}.\n")
   endif()
-
-  find_package(${PROJECT_NAME} REQUIRED HINTS ${${PROJECT_NAME}_CMAKE_PATH})
+  
+  # message(STATUS "GTEST_find_package : ${PROJECT_NAME} REQUIRED HINTS ${${PROJECT_NAME}_CMAKE_PATH}.\n")
+  list(APPEND CMAKE_PREFIX_PATH "/home/rga/repos/geometry/thirdparty/install/Debug/GTEST/lib/cmake/GTest")
+  # find_package(${PROJECT_NAME} REQUIRED HINTS ${${PROJECT_NAME}_CMAKE_PATH})
+  find_package(GTest REQUIRED)
   message(STATUS "Finish installation verification for ${PROJECT_NAME}.\n")
 endfunction()
 

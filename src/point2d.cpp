@@ -15,6 +15,7 @@
 #include "geometry/point2d.hpp"
 
 #include <cmath>
+#include <stdexcept>
 
 namespace yemerge::geometry {
 Point2D::Point2D(double input_x, double input_y) : x_(input_x), y_(input_y){};
@@ -36,9 +37,9 @@ auto Point2D::GetX() const -> double { return x_; }
 
 auto Point2D::GetY() const -> double { return y_; }
 
-auto Point2D::SetX(double input_x) -> void { x_ = input x_; }
+auto Point2D::SetX(double input_x) -> void { x_ = input_x; }
 
-auto Point2D::SetY(double input_y) -> void { y_ = input y_; }
+auto Point2D::SetY(double input_y) -> void { y_ = input_y; }
 
 auto Point2D::operator+(const Point2D &other) const -> Point2D {
   return Point2D(x_ + other.x_, y_ + other.y_);

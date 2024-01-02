@@ -31,9 +31,9 @@ constexpr double kNanometerToMillimeter{1.0e-6};
 constexpr double kNanometerToMicrometer{1.0e-3};
 
 auto ScaleDistanceToNanometer(double input_value,
-                              yemerge::geometr::Distance::Type input_type)
+                              yemerge::geometry::Distance::Type input_type)
     -> int64_t {
-  int64_t return {static_cast<int64_t>(input_value)};
+  int64_t result{static_cast<int64_t>(input_value)};
   if (input_type == yemerge::geometry::Distance::Type::kKilometer) {
     result =
         static_cast<int64_t>(input_value * kKilometerToNanometer);  // 1.0e+12
@@ -122,19 +122,23 @@ auto Distance::operator/(double scale) const -> Distance {
   return Distance(static_cast<double>(nanometer_ / scale), Type::kNanometer);
 }
 
-auto Distance::operator+=(const Distance& other) const -> void {
+// auto Distance::operator+=(const Distance& other) const -> void {
+auto Distance::operator+=(const Distance& other) -> void {
   nanometer_ += other.nanometer_;
 }
 
-auto Distance::operator-=(const Distance& other) const -> void {
+// auto Distance::operator-=(const Distance& other) const -> void {
+auto Distance::operator-=(const Distance& other) -> void {
   nanometer_ -= other.nanometer_;
 }
 
-auto Distance::operator*=(double scale) const -> void {
+// auto Distance::operator*=(double scale) const -> void {
+auto Distance::operator*=(double scale) -> void {
   nanometer_ = static_cast<int64_t>(nanometer_ * scale);
 }
 
-auto Distance::operator/=(double scale) const -> void {
+// auto Distance::operator/=(double scale) const -> void {
+auto Distance::operator/=(double scale) -> void {
   if (scale == 0) { throw std::runtime_error("Division by zero"); }
   nanometer_ = static_cast<int64_t>(nanometer_ / scale);
 }

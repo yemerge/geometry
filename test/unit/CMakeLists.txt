@@ -26,7 +26,13 @@ function(add_test_executable EXECUTABLE_NAME SOURCE_FILES)
   )
 endfunction()
 
-find_package(GTEST REQUIRED HINTS ${GTEST_CMAKE_PATH})
+# target_link_libraries(your_test_target GTest::GTest GTest::Main)
+# list(APPEND CMAKE_PREFIX_PATH "/home/rga/repos/geometry/thirdparty/install/Debug/GTEST/lib/cmake/GTest")
+# find_package(GTest REQUIRED)
+message(STATUS "aaaaaaaaaaaaaaa : ${GTEST_CMAKE_PATH}.\n")
+
+# find_package(GTEST REQUIRED HINTS ${GTEST_CMAKE_PATH})
+find_package(GTest REQUIRED HINTS ${GTEST_CMAKE_PATH})
 
 add_test_executable(${PROJECT_NAME}_${TEST_TYPE}_TESTS ${${PROJECT_NAME}_${TEST_TYPE}_SOURCE_FILES})
 foreach(TEST_FILE_NAME ${${PROJECT_NAME}_${TEST_TYPE}_SOURCE_FILES})

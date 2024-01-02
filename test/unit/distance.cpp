@@ -183,7 +183,7 @@ TEST(GeometryDistance, OperatorGreaterThanOrEqual) {
 
   EXPECT_TRUE(larger_distance >= distance_by_kilo);
   EXPECT_TRUE(distance_by_kilo >= same_distance);
-  EXPECT_FALSE(smaller_distance >= distance_by_kilo);
+  EXPECT_FALSE(same_distance >= distance_by_kilo);
 }
 
 TEST(GeometryDistance, OperatorAdd) {

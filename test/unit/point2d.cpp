@@ -45,10 +45,14 @@ TEST(GeometryPoint2D, CalculateDistance) {
   // Implementing random operations using for loops
   // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
   for (uint32_t i = 0; i < kTestCount; ++i) {
-    constexpr auto KSourceX = static_cast<double>(std::rand());
-    constexpr auto KSourceY = static_cast<double>(std::rand());
-    constexpr auto KTargetX = static_cast<double>(std::rand());
-    constexpr auto KTargetY = static_cast<double>(std::rand());
+    const auto KSourceX = static_cast<double>(std::rand());
+    const auto KSourceY = static_cast<double>(std::rand());
+    const auto KTargetX = static_cast<double>(std::rand());
+    const auto KTargetY = static_cast<double>(std::rand());
+    // constexpr auto KSourceX = static_cast<double>(std::rand());
+    // constexpr auto KSourceY = static_cast<double>(std::rand());
+    // constexpr auto KTargetX = static_cast<double>(std::rand());
+    // constexpr auto KTargetY = static_cast<double>(std::rand());
 
     Point2D source(KSourceX, KSourceY);
     Point2D target(KTargetX, KTargetY);
@@ -73,10 +77,10 @@ TEST(GeometryPoint2D, CalculateDistance) {
 TEST(GeometryPoint2D, StaticCalculateDistance) {
   // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
   for (uint32_t i = 0; i < kTestCount; ++i) {
-    constexpr auto KSourceX = static_cast<double>(std::rand());
-    constexpr auto KSourceY = static_cast<double>(std::rand());
-    constexpr auto KTargetX = static_cast<double>(std::rand());
-    constexpr auto KTargetY = static_cast<double>(std::rand());
+    const auto KSourceX = static_cast<double>(std::rand());
+    const auto KSourceY = static_cast<double>(std::rand());
+    const auto KTargetX = static_cast<double>(std::rand());
+    const auto KTargetY = static_cast<double>(std::rand());
 
     Point2D source(KSourceX, KSourceY);
     Point2D target(KTargetX, KTargetY);
@@ -90,7 +94,7 @@ TEST(GeometryPoint2D, StaticCalculateDistance) {
 TEST(GeometryPoint2D, GetX) {
   // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
   for (uint32_t i = 0; i < kTestCount; ++i) {
-    constexpr auto KSourceX = static_cast<double>(std::rand());
+    const auto KSourceX = static_cast<double>(std::rand());
 
     Point2D source(KSourceX, 0.0);
 
@@ -101,7 +105,7 @@ TEST(GeometryPoint2D, GetX) {
 TEST(GeometryPoint2D, GetY) {
   // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
   for (uint32_t i = 0; i < kTestCount; ++i) {
-    constexpr auto KSourceY = static_cast<double>(std::rand());
+    const auto KSourceY = static_cast<double>(std::rand());
 
     Point2D source(0.0, KSourceY);
 
@@ -112,7 +116,7 @@ TEST(GeometryPoint2D, GetY) {
 TEST(GeometryPoint2D, SetX) {
   // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
   for (uint32_t i = 0; i < kTestCount; ++i) {
-    constexpr auto KSourceX = static_cast<double>(std::rand());
+    const auto KSourceX = static_cast<double>(std::rand());
 
     Point2D source;  // Initialized with default constructor
 
@@ -125,7 +129,7 @@ TEST(GeometryPoint2D, SetX) {
 TEST(GeometryPoint2D, SetY) {
   // constexpr uint32_t kTestCount = 1000U; // Created an unnamed namespace.
   for (uint32_t i = 0; i < kTestCount; ++i) {
-    constexpr auto KSourceY = static_cast<double>(std::rand());
+    const auto KSourceY = static_cast<double>(std::rand());
 
     Point2D source;  // Initialized with default constructor
 
@@ -137,10 +141,10 @@ TEST(GeometryPoint2D, SetY) {
 
 TEST(GeometryPoint2D, OperatorPlus) {
   for (uint32_t i = 0; i < kTestCount; ++i) {
-    constexpr auto KSourceX = static_cast<double>(std::rand());
-    constexpr auto KSourceY = static_cast<double>(std::rand());
-    constexpr auto KTargetX = static_cast<double>(std::rand());
-    constexpr auto KTargetY = static_cast<double>(std::rand());
+    const auto KSourceX = static_cast<double>(std::rand());
+    const auto KSourceY = static_cast<double>(std::rand());
+    const auto KTargetX = static_cast<double>(std::rand());
+    const auto KTargetY = static_cast<double>(std::rand());
 
     Point2D source(KSourceX, KSourceY);
     Point2D target(KTargetX, KTargetY);
@@ -153,10 +157,10 @@ TEST(GeometryPoint2D, OperatorPlus) {
 
 TEST(GeometryPoint2D, OperatorMinus) {
   for (uint32_t i = 0; i < kTestCount; ++i) {
-    constexpr auto KSourceX = static_cast<double>(std::rand());
-    constexpr auto KSourceY = static_cast<double>(std::rand());
-    constexpr auto KTargetX = static_cast<double>(std::rand());
-    constexpr auto KTargetY = static_cast<double>(std::rand());
+    const auto KSourceX = static_cast<double>(std::rand());
+    const auto KSourceY = static_cast<double>(std::rand());
+    const auto KTargetX = static_cast<double>(std::rand());
+    const auto KTargetY = static_cast<double>(std::rand());
 
     Point2D source(KSourceX, KSourceY);
     Point2D target(KTargetX, KTargetY);
@@ -259,4 +263,5 @@ TEST(GeometryPoint2D, OperatorNotEqual) {
       EXPECT_TRUE(source != target);
     }
   }
+}
 }
