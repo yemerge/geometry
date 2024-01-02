@@ -122,7 +122,7 @@ class Point2D {
    * @return Point2D A new Point2D object with the result of the subtraction.
    */
   auto operator-(const Point2D& other) const -> Point2D;
-  
+
   /**
    * @brief Adds a Point2D object to the current object.
    * @param other The Point2D object to add.

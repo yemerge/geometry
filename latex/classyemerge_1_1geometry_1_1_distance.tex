@@ -1,0 +1,618 @@
+\hypertarget{classyemerge_1_1geometry_1_1_distance}{}\doxysection{yemerge\+::geometry\+::Distance Class Reference}
+\label{classyemerge_1_1geometry_1_1_distance}\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+
+
+The class for abstract distance.  
+
+
+
+
+{\ttfamily \#include $<$distance.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}{Type}} \{ \newline
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a10082149a7c15e73e817bc37fe12abbc}{Type\+::k\+Kilometer}} = 0, 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a2b773b792041aa90cfa9183c5771feab}{Type\+::k\+Meter}} = 1, 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a5ef83bd93d3fc82ba26695e063e53650}{Type\+::k\+Centimeter}} = 2, 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a9ad47618ca21f107838c3738982b5484}{Type\+::k\+Millimeter}} = 3, 
+\newline
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a9f118bdd9a3e5ffbe081a2919f7191a1}{Type\+::k\+Micrometer}} = 4, 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176ae8290e0e915e12ebebf6deef4d91c0b7}{Type\+::k\+Nanometer}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em The enum class for distance type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a5c406fb7d0fa2c00fd44d30767b124d1}{Distance}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ac8da9e45e5bcac0f296929a002054056}{Distance}} (double input\+\_\+value, \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}{Type}} input\+\_\+type=\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a2b773b792041aa90cfa9183c5771feab}{Type\+::k\+Meter}})
+\item 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a6dfbf540807b7f6711aef0e71c074b18}{Distance}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a435ef7f77b7da1f63b9fb3714c529010}{Distance}} (\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em The move constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ae920f624f4fae73f338c6e39def4ff6d}{$\sim$\+Distance}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} object. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_aa0ac09df866dd09cc172ef87b4f66dd8}{operator=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&=default
+\begin{DoxyCompactList}\small\item\em The copy assignment operator. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_aaf2a049b8c5f8a901eb8ce83b97e4808}{operator=}} (\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&\&other) -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&=default
+\begin{DoxyCompactList}\small\item\em The move assignment operator. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ab71206d7beb701bdf9c1fb53a2fa1f0d}{Get\+Value}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}{Type}} \&input\+\_\+type) const -\/$>$ double
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} value for distance type. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a582836eb0444693566cc502f461662b2}{Set\+Value}} (double input\+\_\+value, const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}{Type}} \&input\+\_\+type) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} value for distance type. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a81f57233a6c6954d8d1bde18a1af3f5b}{operator==}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Compare with other distance object for equality. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ae21bbeeec89811d617203521aa83d1fa}{operator!=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Compare with other distance object for inequality. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a216753b5358bc42479b5fdeb57ff6d6b}{operator$<$}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Check if this distance object is less than the other. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a65b4d06e78961d0bffcd6a3f31929192}{operator$<$=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Check if this distance object is less than or equal to the other. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad6f2d95d982e2abdaf0d7902191a9524}{operator$>$}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Check if this distance object is greater than the other. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ab4f1ea5b4f12eecf04df52626d8b65b4}{operator$>$=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Check if this distance object is greater than or equal to the other. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_adb0ed609c512b06d50e2d78a2f577028}{operator+}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}}
+\begin{DoxyCompactList}\small\item\em Add other distance object. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a798698d2ad626f3f123ba9b22b69e2be}{operator-\/}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}}
+\begin{DoxyCompactList}\small\item\em Subtract another distance object from this one. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a550554d806515928eee8fcbfa5a40a19}{operator$\ast$}} (double scale) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}}
+\begin{DoxyCompactList}\small\item\em Multiply this distance by a scalar value. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad47e1653ca8a99aaa278e775fe52f263}{operator/}} (double scale) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}}
+\begin{DoxyCompactList}\small\item\em Divide this distance by a scalar value. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a0ef65d9be9279c43924d54d7a589f374}{operator+=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Add another distance object to this one and update this object. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a9729ff15d4b24fb315057dac1c004d61}{operator-\/=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&other) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Subtract another distance object from this one and update this object. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ae42e4882b0e30b605a20341434a37a3c}{operator$\ast$=}} (double scale) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Multiply this distance by a scalar value and update this object. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_a77ed9f7f3a1d42a1a30fc7183de391f1}{operator/=}} (double scale) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Divide this distance by a scalar value and update this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class for abstract distance. 
+
+Definition at line 24 of file distance.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}\label{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!Type@{Type}}
+\index{Type@{Type}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}{yemerge\+::geometry\+::\+Distance\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The enum class for distance type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kKilometer@{kKilometer}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!kKilometer@{kKilometer}}}\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a10082149a7c15e73e817bc37fe12abbc}\label{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a10082149a7c15e73e817bc37fe12abbc}} 
+k\+Kilometer&Kilometer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMeter@{kMeter}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!kMeter@{kMeter}}}\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a2b773b792041aa90cfa9183c5771feab}\label{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a2b773b792041aa90cfa9183c5771feab}} 
+k\+Meter&Meter. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCentimeter@{kCentimeter}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!kCentimeter@{kCentimeter}}}\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a5ef83bd93d3fc82ba26695e063e53650}\label{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a5ef83bd93d3fc82ba26695e063e53650}} 
+k\+Centimeter&Centimeter. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMillimeter@{kMillimeter}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!kMillimeter@{kMillimeter}}}\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a9ad47618ca21f107838c3738982b5484}\label{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a9ad47618ca21f107838c3738982b5484}} 
+k\+Millimeter&Millimeter. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMicrometer@{kMicrometer}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!kMicrometer@{kMicrometer}}}\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a9f118bdd9a3e5ffbe081a2919f7191a1}\label{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a9f118bdd9a3e5ffbe081a2919f7191a1}} 
+k\+Micrometer&Micrometer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNanometer@{kNanometer}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!kNanometer@{kNanometer}}}\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176ae8290e0e915e12ebebf6deef4d91c0b7}\label{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176ae8290e0e915e12ebebf6deef4d91c0b7}} 
+k\+Nanometer&Nanometer. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 29 of file distance.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a5c406fb7d0fa2c00fd44d30767b124d1}\label{classyemerge_1_1geometry_1_1_distance_a5c406fb7d0fa2c00fd44d30767b124d1}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!Distance@{Distance}}
+\index{Distance@{Distance}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily yemerge\+::geometry\+::\+Distance\+::\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} object. 
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ac8da9e45e5bcac0f296929a002054056}\label{classyemerge_1_1geometry_1_1_distance_ac8da9e45e5bcac0f296929a002054056}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!Distance@{Distance}}
+\index{Distance@{Distance}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily yemerge\+::geometry\+::\+Distance\+::\+Distance (\begin{DoxyParamCaption}\item[{double}]{input\+\_\+value,  }\item[{\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}{Type}}}]{input\+\_\+type = {\ttfamily \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176a2b773b792041aa90cfa9183c5771feab}{Type\+::k\+Meter}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line 57 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a6dfbf540807b7f6711aef0e71c074b18}\label{classyemerge_1_1geometry_1_1_distance_a6dfbf540807b7f6711aef0e71c074b18}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!Distance@{Distance}}
+\index{Distance@{Distance}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily yemerge\+::geometry\+::\+Distance\+::\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a435ef7f77b7da1f63b9fb3714c529010}\label{classyemerge_1_1geometry_1_1_distance_a435ef7f77b7da1f63b9fb3714c529010}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!Distance@{Distance}}
+\index{Distance@{Distance}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily yemerge\+::geometry\+::\+Distance\+::\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+The move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ae920f624f4fae73f338c6e39def4ff6d}\label{classyemerge_1_1geometry_1_1_distance_ae920f624f4fae73f338c6e39def4ff6d}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!````~Distance@{$\sim$Distance}}
+\index{````~Distance@{$\sim$Distance}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{$\sim$Distance()}{~Distance()}}
+{\footnotesize\ttfamily virtual yemerge\+::geometry\+::\+Distance\+::$\sim$\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ab71206d7beb701bdf9c1fb53a2fa1f0d}\label{classyemerge_1_1geometry_1_1_distance_ab71206d7beb701bdf9c1fb53a2fa1f0d}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::\+Get\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}{Type}} \&}]{input\+\_\+type }\end{DoxyParamCaption}) const -\/$>$ double}
+
+
+
+Get the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} value for distance type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+type} & The distance type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The distance value 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file distance.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyemerge_1_1geometry_1_1_distance_ab71206d7beb701bdf9c1fb53a2fa1f0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ae21bbeeec89811d617203521aa83d1fa}\label{classyemerge_1_1geometry_1_1_distance_ae21bbeeec89811d617203521aa83d1fa}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Compare with other distance object for inequality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If not equal. 
+
+false If equal. 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a550554d806515928eee8fcbfa5a40a19}\label{classyemerge_1_1geometry_1_1_distance_a550554d806515928eee8fcbfa5a40a19}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{scale }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}}}
+
+
+
+Multiply this distance by a scalar value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The scalar value to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} The result of multiplication. 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ae42e4882b0e30b605a20341434a37a3c}\label{classyemerge_1_1geometry_1_1_distance_ae42e4882b0e30b605a20341434a37a3c}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{double}]{scale }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Multiply this distance by a scalar value and update this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The scalar value to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_adb0ed609c512b06d50e2d78a2f577028}\label{classyemerge_1_1geometry_1_1_distance_adb0ed609c512b06d50e2d78a2f577028}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator+@{operator+}}
+\index{operator+@{operator+}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}}}
+
+
+
+Add other distance object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} The result of addition 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a0ef65d9be9279c43924d54d7a589f374}\label{classyemerge_1_1geometry_1_1_distance_a0ef65d9be9279c43924d54d7a589f374}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Add another distance object to this one and update this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a798698d2ad626f3f123ba9b22b69e2be}\label{classyemerge_1_1geometry_1_1_distance_a798698d2ad626f3f123ba9b22b69e2be}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}}}
+
+
+
+Subtract another distance object from this one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} The result of subtraction. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a9729ff15d4b24fb315057dac1c004d61}\label{classyemerge_1_1geometry_1_1_distance_a9729ff15d4b24fb315057dac1c004d61}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Subtract another distance object from this one and update this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad47e1653ca8a99aaa278e775fe52f263}\label{classyemerge_1_1geometry_1_1_distance_ad47e1653ca8a99aaa278e775fe52f263}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator/@{operator/}}
+\index{operator/@{operator/}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator/ (\begin{DoxyParamCaption}\item[{double}]{scale }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}}}
+
+
+
+Divide this distance by a scalar value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The scalar value to divide by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} The result of division. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If scale is zero. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 120 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a77ed9f7f3a1d42a1a30fc7183de391f1}\label{classyemerge_1_1geometry_1_1_distance_a77ed9f7f3a1d42a1a30fc7183de391f1}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator/= (\begin{DoxyParamCaption}\item[{double}]{scale }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Divide this distance by a scalar value and update this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The scalar value to divide by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If scale is zero. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 141 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a216753b5358bc42479b5fdeb57ff6d6b}\label{classyemerge_1_1geometry_1_1_distance_a216753b5358bc42479b5fdeb57ff6d6b}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Check if this distance object is less than the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If this distance object is less than the other. 
+
+false Otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a65b4d06e78961d0bffcd6a3f31929192}\label{classyemerge_1_1geometry_1_1_distance_a65b4d06e78961d0bffcd6a3f31929192}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Check if this distance object is less than or equal to the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If this distance object is less than or equal to the other. 
+
+false Otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_aa0ac09df866dd09cc172ef87b4f66dd8}\label{classyemerge_1_1geometry_1_1_distance_aa0ac09df866dd09cc172ef87b4f66dd8}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator=@{operator=}}
+\index{operator=@{operator=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&=default\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference of distance object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_aaf2a049b8c5f8a901eb8ce83b97e4808}\label{classyemerge_1_1geometry_1_1_distance_aaf2a049b8c5f8a901eb8ce83b97e4808}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator=@{operator=}}
+\index{operator=@{operator=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&\&}]{other }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&=default\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The move assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference of distance object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a81f57233a6c6954d8d1bde18a1af3f5b}\label{classyemerge_1_1geometry_1_1_distance_a81f57233a6c6954d8d1bde18a1af3f5b}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator==@{operator==}}
+\index{operator==@{operator==}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Compare with other distance object for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If equal 
+
+false If not equal 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ad6f2d95d982e2abdaf0d7902191a9524}\label{classyemerge_1_1geometry_1_1_distance_ad6f2d95d982e2abdaf0d7902191a9524}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Check if this distance object is greater than the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If this distance object is greater than the other. 
+
+false Otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_ab4f1ea5b4f12eecf04df52626d8b65b4}\label{classyemerge_1_1geometry_1_1_distance_ab4f1ea5b4f12eecf04df52626d8b65b4}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Check if this distance object is greater than or equal to the other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other distance object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If this distance object is greater than or equal to the other. 
+
+false Otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file distance.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_distance_a582836eb0444693566cc502f461662b2}\label{classyemerge_1_1geometry_1_1_distance_a582836eb0444693566cc502f461662b2}} 
+\index{yemerge::geometry::Distance@{yemerge::geometry::Distance}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!yemerge::geometry::Distance@{yemerge::geometry::Distance}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Distance\+::\+Set\+Value (\begin{DoxyParamCaption}\item[{double}]{input\+\_\+value,  }\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance_ad35c24a5cf436bb573446e16ec3a8176}{Type}} \&}]{input\+\_\+type }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Set the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_distance}{Distance}} value for distance type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+value} & The distance value \\
+\hline
+{\em input\+\_\+type} & The distance type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file distance.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyemerge_1_1geometry_1_1_distance_a582836eb0444693566cc502f461662b2_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/geometry/\mbox{\hyperlink{distance_8hpp}{distance.\+hpp}}\item 
+src/\mbox{\hyperlink{src_2distance_8cpp}{distance.\+cpp}}\end{DoxyCompactItemize}

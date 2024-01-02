@@ -1,0 +1,520 @@
+\hypertarget{classyemerge_1_1geometry_1_1_point2_d}{}\doxysection{yemerge\+::geometry\+::Point2D Class Reference}
+\label{classyemerge_1_1geometry_1_1_point2_d}\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+
+
+Point class with 2-\/dimension.  
+
+
+
+
+{\ttfamily \#include $<$point2d.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a39fdc3b5ae8267a3eea2fe0b3d318c58}{Point2D}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new Point 2D object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a2ebdd16d4d583f488d0b4bec8e83346d}{Point2D}} (double input\+\_\+x, double input\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Construct a new Point 2D object with x, y value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a434633f6db64806447f0d3c3b4489687}{Point2D}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy construct a new Point 2D object with othe \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_af0a0b55346cdbf8b40d154b29e875b1b}{Point2D}} (\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move construct a new Point 2D object with othe \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_acb24d8d08a9ad5839658d175653c95fb}{$\sim$\+Point2D}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the Point 2d object. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a318f9c89557b6b4ac55e96d4e777e955}{operator=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&other) -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&=default
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_af8e4e393505aae12bc0e5945d105a4ba}{operator=}} (\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&\&other) -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&=default
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_ae4a85c394fbc94177718cff0a5c1934d}{Calculate\+Distance}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&target) const -\/$>$ double
+\begin{DoxyCompactList}\small\item\em Calculate distance between this point and target point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a3b62ece29fa95ab74c58942312312904}{SetX}} (double input\+\_\+x)
+\begin{DoxyCompactList}\small\item\em Set x coordinate value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a42c164ba3bcfa98a02113d234250635a}{SetY}} (double input\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Set y coordinate value. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a83a61d4dfd72edaec4a420eb7a09be1d}{GetX}} () const -\/$>$ double
+\begin{DoxyCompactList}\small\item\em Get x coordinate value of this point. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a4c1b988b871292ce0c1a02a725adfb14}{GetY}} () const -\/$>$ double
+\begin{DoxyCompactList}\small\item\em Get y coordinate value of this point. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a22f39ac64cce314071106024f63fd6bc}{operator+}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&other) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}
+\begin{DoxyCompactList}\small\item\em Adds two \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_ad050167e9bd0aab5d0c25b414f8e5bb1}{operator-\/}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&other) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}
+\begin{DoxyCompactList}\small\item\em Subtracts two \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_aec29057a9de413572b10b01018421985}{operator+=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&other) -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to the current object. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_abccf96ebf365a7612556f4148ac5007e}{operator-\/=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&other) -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&
+\begin{DoxyCompactList}\small\item\em Subtracts a \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object from the current object. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a3ea94771ca746cf20343651e061bde65}{operator$\ast$}} (double scalar) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}
+\begin{DoxyCompactList}\small\item\em Multiplies the coordinates of the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object by a scalar. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a2d25648c878172327261902cc39c5507}{operator/}} (double scalar) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}
+\begin{DoxyCompactList}\small\item\em Divides the coordinates of the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object by a scalar. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a7974020abe0796860c7dc282dc4ba408}{operator==}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&other) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Checks if two \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects are equal. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_a0f07aa4baa99c652f2613db085160fad}{operator!=}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&other) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Checks if two \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects are not equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d_ac5bd476661c502e9d7df8c35066c61d5}{Calculate\+Distance}} (const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&lhs, const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&rhs) -\/$>$ double
+\begin{DoxyCompactList}\small\item\em Calculate distance between lhs point and rhs point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Point class with 2-\/dimension. 
+
+
+
+Definition at line 24 of file point2d.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a39fdc3b5ae8267a3eea2fe0b3d318c58}\label{classyemerge_1_1geometry_1_1_point2_d_a39fdc3b5ae8267a3eea2fe0b3d318c58}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!Point2D@{Point2D}}
+\index{Point2D@{Point2D}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{Point2D()}{Point2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily yemerge\+::geometry\+::\+Point2\+D\+::\+Point2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new Point 2D object. 
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a2ebdd16d4d583f488d0b4bec8e83346d}\label{classyemerge_1_1geometry_1_1_point2_d_a2ebdd16d4d583f488d0b4bec8e83346d}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!Point2D@{Point2D}}
+\index{Point2D@{Point2D}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{Point2D()}{Point2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily yemerge\+::geometry\+::\+Point2\+D\+::\+Point2D (\begin{DoxyParamCaption}\item[{double}]{input\+\_\+x,  }\item[{double}]{input\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Construct a new Point 2D object with x, y value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Double type x coordinate value \\
+\hline
+{\em y} & Double type y coordinate value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a434633f6db64806447f0d3c3b4489687}\label{classyemerge_1_1geometry_1_1_point2_d_a434633f6db64806447f0d3c3b4489687}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!Point2D@{Point2D}}
+\index{Point2D@{Point2D}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{Point2D()}{Point2D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily yemerge\+::geometry\+::\+Point2\+D\+::\+Point2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy construct a new Point 2D object with othe \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_af0a0b55346cdbf8b40d154b29e875b1b}\label{classyemerge_1_1geometry_1_1_point2_d_af0a0b55346cdbf8b40d154b29e875b1b}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!Point2D@{Point2D}}
+\index{Point2D@{Point2D}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{Point2D()}{Point2D()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily yemerge\+::geometry\+::\+Point2\+D\+::\+Point2D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move construct a new Point 2D object with othe \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_acb24d8d08a9ad5839658d175653c95fb}\label{classyemerge_1_1geometry_1_1_point2_d_acb24d8d08a9ad5839658d175653c95fb}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!````~Point2D@{$\sim$Point2D}}
+\index{````~Point2D@{$\sim$Point2D}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{$\sim$Point2D()}{~Point2D()}}
+{\footnotesize\ttfamily virtual yemerge\+::geometry\+::\+Point2\+D\+::$\sim$\+Point2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the Point 2d object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_ac5bd476661c502e9d7df8c35066c61d5}\label{classyemerge_1_1geometry_1_1_point2_d_ac5bd476661c502e9d7df8c35066c61d5}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!CalculateDistance@{CalculateDistance}}
+\index{CalculateDistance@{CalculateDistance}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{CalculateDistance()}{CalculateDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::\+Calculate\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{rhs }\end{DoxyParamCaption}) -\/$>$ double\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculate distance between lhs point and rhs point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & Left hand side \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object \\
+\hline
+{\em rhs} & Right hand side \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Euclidean distance between lhs point and rhs point 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_ae4a85c394fbc94177718cff0a5c1934d}\label{classyemerge_1_1geometry_1_1_point2_d_ae4a85c394fbc94177718cff0a5c1934d}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!CalculateDistance@{CalculateDistance}}
+\index{CalculateDistance@{CalculateDistance}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{CalculateDistance()}{CalculateDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::\+Calculate\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{target }\end{DoxyParamCaption}) const -\/$>$ double}
+
+
+
+Calculate distance between this point and target point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Other \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to calculate distance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Euclidean distance between this point and target point 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file point2d.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyemerge_1_1geometry_1_1_point2_d_ae4a85c394fbc94177718cff0a5c1934d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a83a61d4dfd72edaec4a420eb7a09be1d}\label{classyemerge_1_1geometry_1_1_point2_d_a83a61d4dfd72edaec4a420eb7a09be1d}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!GetX@{GetX}}
+\index{GetX@{GetX}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{GetX()}{GetX()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::\+GetX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ double}
+
+
+
+Get x coordinate value of this point. 
+
+\begin{DoxyReturn}{Returns}
+double x coordinate value of this point 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file point2d.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyemerge_1_1geometry_1_1_point2_d_a83a61d4dfd72edaec4a420eb7a09be1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a4c1b988b871292ce0c1a02a725adfb14}\label{classyemerge_1_1geometry_1_1_point2_d_a4c1b988b871292ce0c1a02a725adfb14}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!GetY@{GetY}}
+\index{GetY@{GetY}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{GetY()}{GetY()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::\+GetY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ double}
+
+
+
+Get y coordinate value of this point. 
+
+\begin{DoxyReturn}{Returns}
+double y coordinate value of this point 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file point2d.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyemerge_1_1geometry_1_1_point2_d_a4c1b988b871292ce0c1a02a725adfb14_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a0f07aa4baa99c652f2613db085160fad}\label{classyemerge_1_1geometry_1_1_point2_d_a0f07aa4baa99c652f2613db085160fad}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Checks if two \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects are not equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects do not have the same coordinates 
+
+false Oherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a3ea94771ca746cf20343651e061bde65}\label{classyemerge_1_1geometry_1_1_point2_d_a3ea94771ca746cf20343651e061bde65}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{scalar }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}}
+
+
+
+Multiplies the coordinates of the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object by a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar value to multiply with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} A new \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object with the multiplied coordinates. 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a22f39ac64cce314071106024f63fd6bc}\label{classyemerge_1_1geometry_1_1_point2_d_a22f39ac64cce314071106024f63fd6bc}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator+@{operator+}}
+\index{operator+@{operator+}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}}
+
+
+
+Adds two \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} A new \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object with the sum of the coordinates. 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_aec29057a9de413572b10b01018421985}\label{classyemerge_1_1geometry_1_1_point2_d_aec29057a9de413572b10b01018421985}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{other }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}\&}
+
+
+
+Adds a \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to the current object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}\& A reference to the current object after addition. 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_ad050167e9bd0aab5d0c25b414f8e5bb1}\label{classyemerge_1_1geometry_1_1_point2_d_ad050167e9bd0aab5d0c25b414f8e5bb1}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}}
+
+
+
+Subtracts two \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} A new \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object with the result of the subtraction. 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_abccf96ebf365a7612556f4148ac5007e}\label{classyemerge_1_1geometry_1_1_point2_d_abccf96ebf365a7612556f4148ac5007e}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{other }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}\&}
+
+
+
+Subtracts a \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object from the current object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}\& A reference to the current object after subtraction. 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a2d25648c878172327261902cc39c5507}\label{classyemerge_1_1geometry_1_1_point2_d_a2d25648c878172327261902cc39c5507}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator/@{operator/}}
+\index{operator/@{operator/}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator/ (\begin{DoxyParamCaption}\item[{double}]{scalar }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}}
+
+
+
+Divides the coordinates of the \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object by a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar value to divide by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} A new \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object with the divided coordinates. 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a318f9c89557b6b4ac55e96d4e777e955}\label{classyemerge_1_1geometry_1_1_point2_d_a318f9c89557b6b4ac55e96d4e777e955}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator=@{operator=}}
+\index{operator=@{operator=}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{other }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&=default\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}\& Reference of \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_af8e4e393505aae12bc0e5945d105a4ba}\label{classyemerge_1_1geometry_1_1_point2_d_af8e4e393505aae12bc0e5945d105a4ba}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator=@{operator=}}
+\index{operator=@{operator=}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&\&}]{other }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&=default\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}}\& Reference of \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a7974020abe0796860c7dc282dc4ba408}\label{classyemerge_1_1geometry_1_1_point2_d_a7974020abe0796860c7dc282dc4ba408}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!operator==@{operator==}}
+\index{operator==@{operator==}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Checks if two \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If both \mbox{\hyperlink{classyemerge_1_1geometry_1_1_point2_d}{Point2D}} objects have the same coordinates 
+
+false Otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file point2d.\+cpp.
+
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a3b62ece29fa95ab74c58942312312904}\label{classyemerge_1_1geometry_1_1_point2_d_a3b62ece29fa95ab74c58942312312904}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!SetX@{SetX}}
+\index{SetX@{SetX}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{SetX()}{SetX()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::\+SetX (\begin{DoxyParamCaption}\item[{double}]{input\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+Set x coordinate value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Double type input x coordinate value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file point2d.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyemerge_1_1geometry_1_1_point2_d_a3b62ece29fa95ab74c58942312312904_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classyemerge_1_1geometry_1_1_point2_d_a42c164ba3bcfa98a02113d234250635a}\label{classyemerge_1_1geometry_1_1_point2_d_a42c164ba3bcfa98a02113d234250635a}} 
+\index{yemerge::geometry::Point2D@{yemerge::geometry::Point2D}!SetY@{SetY}}
+\index{SetY@{SetY}!yemerge::geometry::Point2D@{yemerge::geometry::Point2D}}
+\doxysubsubsection{\texorpdfstring{SetY()}{SetY()}}
+{\footnotesize\ttfamily auto yemerge\+::geometry\+::\+Point2\+D\+::\+SetY (\begin{DoxyParamCaption}\item[{double}]{input\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Set y coordinate value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Double type input y coordinate value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file point2d.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyemerge_1_1geometry_1_1_point2_d_a42c164ba3bcfa98a02113d234250635a_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/geometry/\mbox{\hyperlink{point2d_8hpp}{point2d.\+hpp}}\item 
+src/\mbox{\hyperlink{src_2point2d_8cpp}{point2d.\+cpp}}\end{DoxyCompactItemize}
