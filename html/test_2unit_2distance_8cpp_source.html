@@ -272,7 +272,7 @@ $(document).ready(function(){initNavTree('test_2unit_2distance_8cpp_source.html'
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  EXPECT_TRUE(larger_distance &gt;= distance_by_kilo);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  EXPECT_TRUE(distance_by_kilo &gt;= same_distance);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  EXPECT_FALSE(same_distance &gt;= distance_by_kilo);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  EXPECT_FALSE(distance_by_kilo &gt;= larger_distance);</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
 <div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="namespaceyemerge_1_1geometry.html#a3917fd2a4c9cea39a9f005b6167adaa3">  189</a></span>&#160;<a class="code" href="namespaceyemerge_1_1geometry.html#a58de34c166316dba84ccd77dd475dd4c">TEST</a>(GeometryDistance, OperatorAdd) {</div>
